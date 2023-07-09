@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedido de Namoro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            /* Substitua o caminho abaixo pelo caminho correto da imagem de fundo */
+            background-image: url('7302991c29b79cd0095f8b68759de4be.jpg');
+            background-size: 40%;
+            background-position: center;
+        }
+        
+        h1 {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+        }
+        
+        .btn-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+        
+        #simBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        #naoBtn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <img src="482e90825fdc04497fd6ce185e993087.png" alt="Imagem" style="width: 1200px; height: 40px;">
+    </h1>
+    <div class="btn-container">
+        <button id="simBtn" class="btn">Sim</button>
+        <button id="naoBtn" class="btn">Não</button>
+    </div>
+
+    <script>
+        var simBtn = document.getElementById('simBtn');
+        var naoBtn = document.getElementById('naoBtn');
+        var container = document.querySelector('.btn-container');
+
+        naoBtn.addEventListener('click', function() {
+            var randomX = Math.floor(Math.random() * (container.offsetWidth - naoBtn.offsetWidth));
+            var randomY = Math.floor(Math.random() * (container.offsetHeight - naoBtn.offsetHeight));
+
+            naoBtn.style.left = randomX + 'px';
+            naoBtn.style.top = randomY + 'px';
+        });
+
+        simBtn.addEventListener('click', function() {
+            alert('ok, vamos toma nascau quente e assisti serie agarradinhos');
+        });
+    </script>
+</body>
+</html>
